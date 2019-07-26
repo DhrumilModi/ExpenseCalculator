@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<link href="https://fonts.googleapis.com/css?family=Hind+Siliguri:400,500,600,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style>
+			*
+			{
+				margin:0px;
+				font-family: 'Hind Siliguri', sans-serif;
+			}
+			.title
+			{
+				line-height: 8vh;
+				text-align:center;
+				font-weight: bold;
+				
+				background:  linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) ;
+				/* ,url("./img/money1.jpg"); */
+				background-repeat: no-repeat;
+				background-size: 100% 110%;
+				padding-top:30vh;
+				padding-bottom:13vh;
+				border-radius: 5px;
+				display:flex;
+				align-content: center;
+				justify-content:center; 
+				clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+				overflow: hidden;
+			}	
+			.title-text
+			{
+				padding:45px 66px;
+				background:rgba(.5,.5,.5,.5); 
+				border-radius: 100px;
+				animation:text-animation 4s;
+				opacity:1;
+				width:100%;
+				overflow: hidden;
+				height:200px;
+				transform:translateX(0px);
+					
+			}
+			@keyframes text-animation
+			{
+				0%
+				{
+					
+					transform:translateX(1000px);
+					height:200px;
+					opacity:0;
+				}
+				100%
+				{
+					height:200px;
+					opacity:1;
+					transform:translateX(0px);
+					
+			
+				}
+				
+			}
+			.title-head
+			{
+	
+				font-size: 10vh;
+				  background: white;
+				  -webkit-background-clip: text;
+				  -webkit-text-fill-color: transparent; 
+				  text-align:center;
+				  box-decoration-break: clone;
+				  letter-spacing: 7px;
+			}
+			#date
+			{
+			
+				font-size: 6vh;
+				  background:  white;
+				  -webkit-background-clip: text;
+				  -webkit-text-fill-color: transparent; 
+				  text-align:center;
+				  box-decoration-break: clone;
+				  letter-spacing: 3px;
+			}
+			.bg
+			{
+				background: linear-gradient(to right,red,70%,green);
+				transition: 8s ease-in all;
+			}
+			.bg2
+			{
+				background: linear-gradient(to right,red,70%,green);
+
+			}
+			.bg:hover
+			{
+				background: linear-gradient(to right,red,30%,green);			
+			}
+			.fcontainer
+			{	
+				display:flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			.fchild1
+  			{
+	  			font-size:15vh;
+				  color:balck;
+  			}
+			.fchild3
+			{
+				
+				width:100%;
+				text-align: center;
+				padding: 2vh;
+				background: linear-gradient(to right,red,20%,white,40%,green,40%);
+		
+			}
+			.btn
+			{
+				padding:2vh 19vh;
+				font-family: 'Hind Siliguri', sans-serif;
+				font-size: 4vh;
+				
+			}
+			.header {
+				overflow: hidden;
+				background-color: rgba(0,0,0,.6);
+				position:fixed;
+				width:100%;
+				top:0;
+				left:0;
+				margin-bottom: 0px;
+				z-index:1;
+			}
+
+			.header a {
+				float: left;
+				color:white;
+				text-align: center;
+				text-decoration: none;
+				font-size: 18px; 
+				line-height: 25px;
+				border-radius: 4px;
+				padding:50px 40px;
+				border-radius: 30px;
+				
+			}
+			.header a.logo {
+				font-size: 25px;
+				font-weight: bold;
+			}
+
+			.header a:hover {
+				background-color: green;
+				color:white;
+				
+			}
+
+			.header-right {
+				float: right;
+			}
+			select
+			{
+				width:13vh;
+				height:10vh;
+				border-radius: 10px;
+				font-size:20px;
+				text-align: center;
+				overflow: hidden;
+				backface-visibility: hidden;
+				
+			}
+			input[type=text]
+			{
+					padding:9px 23px 9px;
+					border-radius: 50px;
+					font-size: 3vh;
+					width:55vh;
+					float:right;
+					outline: none;
+					border: 1px solid #007bff;
+					box-shadow: 5px 10px 18px #888888;
+			}
+			::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+			  color: #007bff;
+			  letter-spacing: 2px;
+			  font-size: 3vh;
+			}
+			input[type=number]
+			{
+					padding:9px 7px 9px 23px;
+					border-radius: 50px;
+					font-size: 3vh;
+					width:25vh;
+					float:right;
+					outline: none;
+					border: 1px solid #007bff;
+					box-shadow: 5px 10px 18px #888888;
+			}
+			input[type=number]:focus,input[type=text]:focus
+			{
+				box-shadow: 5px 10px 8px #888888;
+			}
+
+			.p2
+			{
+				content: "";
+				position: relative;
+				width: 100%;
+				height: 15px;
+				background-image: url("./img/parallax-top-alt.png");
+				background-repeat: repeat-x;
+				background-size: 12px 15px;
+				z-index: 999;
+				top:14px;
+			}
+			.fcontainer2
+			{
+				display:flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				overflow: hidden;
+			}	
+			.f2child1
+			{
+				border:2px solid red;
+				height:500px;
+				width:600px;
+				border-radius: 50px;
+				overflow: hidden;
+				
+			}
+			.f2child2
+			{
+				border:2px solid green;
+				height:500px;
+				width:600px;
+				border-radius: 50px;
+					overflow: hidden;
+			
+			}
+			.f2child1-h1
+			{
+				text-align: center;
+				font-weight:bold;
+				padding-top:2vh;
+				padding-bottom: 2vh;
+				color:white;
+				text-transform: uppercase; 
+			}
+			.bg-red
+			{
+				background: red;
+			}
+			.bg-red:hover
+			{
+				background: red;
+			}
+			.text-red
+			{
+				color:red;
+			}
+			.bg-green
+			{
+				background: green;
+			}
+			.text-green
+			{
+				color:green;
+			}
+			.bg-blue
+			{
+				background:#007bff;
+			}
+			.bg-blue:hover
+			{
+				background:#007bff;
+			}
+			
+			.text-blue
+			{
+				color:#007bff;
+			}
+			
+			.close
+			{
+				display:none;
+				padding:4px 7px;
+				border-radius: 50px;
+				font-size:20px;
+				
+			}
+			tr:hover .close
+			{
+				display: block;
+				color:white;
+				background-color: red;
+				padding:4px 7px;
+				border:1px solid gray;
+			}
+
+			.img-conainer
+			{
+				height:57vh;
+				width:57vh;
+				overflow: hidden;
+				border-radius: 160px;
+				border:2px solid #007bff;
+				
+			}
+			.img1
+			{
+				width:100%;
+				height:auto;
+			
+				
+			}
+
+			.about
+			{
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				margin:10px 30px 3px;
+				padding:10px;
+				border:2px solid  #007bff;
+				border-radius: 50px;
+			}
+			.main-container
+			{
+				display:flex;
+				flex-wrap:wrap;
+				justify-content: space-around;
+			}
+			.expenses
+			{
+				display :flex;
+				flex-direction: column;
+				position:relative;
+				top:0;
+
+			}
+			.ehead
+			{
+				text-align: center;
+				color:red;
+				
+			}
+			.income			{
+				display :flex;
+				flex-direction: column;
+				flex-wrap:wrap;
+
+
+			}
+			.ihead
+			{
+				text-align: center;
+				color:green;
+				
+			}
+			.img-conainer2
+			{
+				width:34vh;
+				height:auto;
+				position: relative;
+				top: -15px;
+				z-index: -1;
+			}
+			.expense-img
+			{
+				width:100%;
+				height:auto;
+			}
+			.lexpenses
+			{
+				font-size:5vh;
+			}
+			.borderRed
+			{
+				border:1px solid red;
+				border-radius: 50px;
+				padding: 30px 40px;
+				transform: scale(0.8);
+		    	 transition:all 0.5s ease;
+				 margin:6.5rem auto;
+			}
+			.borderRed:hover ,.borderGreen:hover{
+				transform: scale(1);
+			}
+			.borderGreen
+			{
+				border:1px solid green;
+				border-radius: 50px;
+				padding: 30px 40px;
+				transform: scale(0.8);
+		    	 transition:all 0.5s ease;
+				margin:6.5rem auto;
+			}
+			.red1::-webkit-input-placeholder {
+ 		   color:red;
+			
+ 			}
+			 .widthTd
+			 {
+				 width:60% !important;
+			 }
+			 tr.r1
+			 {
+				transform: scale(0.97);
+				transition: 0.2s ease all;
+			 }
+			 tr.r1:hover
+			 {
+				
+				transform: scale(1);
+			 }
+			 .scroll
+			 {
+				 width:100%;
+				 height:500px;
+				 overflow:scroll;
+			 }
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+	
+  }
+  
+  .header-right {
+    float: none;
+  }
+
+  
+  
+}
+		</style>
+</head>
+<body>
+		<div class="header">
+				<div style="display:inline-block;padding:5vh;"><img src="./img/logo.png" style="height:70px"/></div>
+				<div class="header-right">
+				  <a href="#about">About</a>
+				</div>
+			  </div>
+			  
+	<div class="bg">
+	<section class="title">
+		<div class="title-text">
+				<span class="title-head">Budgetary Expenses</span>
+				<span id="date"> </span>
+		</div>
+	</section>
+	
+	</div>
+	<div class="main-container">
+	<section class="expenses">
+		<!-- <div class="img-conainer2"><img src="./img/expense.png" class="expense-img"></div> -->
+		<div class="borderRed">	
+			<div class="ehead"><span class="h1"> Expense </span>	
+			<div class="lexpenses"><span>  &#8377; <span id="expense">00.00</span></span></div>
+		</div>
+	</section>		
+	<section class="fcontainer">
+		<section class="fchild1 my-4">
+				
+				<span><span style="font-size:8vh;">Rs </span><span id="calc">00.00</span>.</span>
+		</section>
+		<section class="fchild2 my-3">
+				<input type="number"  placeholder="Value" class="mx-3" id="value" min="0"/>
+				<input type="text" placeholder="Enter Description..." id="desc"/>
+		</section>
+		<section class="fchild3 my-3" >
+			<select class="mx-2" id="sign" onchange={changeFunction()}>
+				<option value="+">+</option>
+				<option value="-">-</option>
+
+			</select>	
+			<button type="button" class="btn btn-primary" id="btnCalculate" onclick={Calculate()}>Calculate</button>
+		</section>			
+	</section>
+	<section class="income">
+			<!-- <div class="img-conainer2"><img src="./img/income.png" class="expense-img"></div>		 -->
+			<div class="borderGreen">
+				<div class="ihead"><span class="h1"> Income </span>
+				<div class="lexpenses"><span>  &#8377;<span id="income">00.00</span></span></div>
+			</div>
+	</section>			
+		
+</div>
+
+
+	<section class="fcontainer2 my-5">
+		<div class="f2child1">
+			<div class="f2child1-h1 bg-red"><h1>Expense</h1></div>
+			<div class="scroll">
+			<table class="table table-hover">
+					<thead>
+					  <tr>
+						<th class="widthTd">Detail</th>
+						<th>Value</th>
+						<th></th>
+					  </tr>
+					 
+					</thead>
+					<tbody id="eTable">
+					
+					</tbody>
+				  </table>
+			</div>
+		</div>
+		<div class="f2child2">
+				<div class="f2child1-h1 bg-green"><h1>Income</h1></div>
+				<div class="scroll">
+						<table class="table table-hover">
+						<thead>
+						  <tr>
+							<th class="widthTd">Detail</th>
+							<th>Value</th>
+							<th></th>
+						  </tr>
+						</thead>
+						<tbody id="iTable">
+						 
+						</tbody>
+					  </table>
+				</div>  
+
+
+		</div>
+		
+
+	</section>
+		
+	<!-- <section class="about">
+		<div class="text-center">
+		<div class="img-conainer"><img src="./img/Dhrumil.png" >
+		</div>
+		<span class="h1 text-weight-bold text-blue">Dhrumil Modi</span><br>
+		<span class="text-red h5">(Developer)</span>
+		</div>
+		<div class="budget-text">
+		</div>
+	</section> -->
+
+	<!-- Footer -->
+<footer class="page-footer font-small unique-color-dark pt-4">
+
+		<!-- Copyright -->
+		<div class="footer-copyright text-center py-3 bg-dark text-white">© 2019 Copyright:
+		  <a href="Dhrumil.com" style="color:red;text-decoration: none;"> Dhrumil.com</a>
+		</div>
+		<!-- Copyright -->
+	  
+	  </footer>
+	  <!-- Footer -->
+	<script>
+		var d = new Date();
+			document.getElementById("date").innerHTML = "<br> on " + d.toDateString();
+			var cntEx=0,cntIn=0;
+		
+		function changeFunction()
+		{
+			var sign=document.getElementById("sign");
+			var btnCalculate=document.getElementById("btnCalculate");
+			var desc=document.getElementById("desc");
+			var value=document.getElementById("value");
+			
+			console.log(sign.value);
+			if(sign.value=="-")
+			{
+				// btnCalculate.classList.add("bg-red");
+				btnCalculate.style.backgroundColor="red";
+				desc.style.border="1px solid red";
+				desc.classList.remove("blue1");
+				desc.classList.add("red1");
+				value.style.border="1px solid red";
+				value.classList.remove("blue1");
+				value.classList.add("red1");
+
+			}
+			if(sign.value=="+")
+			{
+				// btnCalculate.classList.add("bg-blue");
+				btnCalculate.style.backgroundColor="#007bff";
+				desc.style.border="1px solid #007bff";
+				desc.classList.remove("red1");
+				desc.classList.add("blue1");
+				value.style.border="1px solid #007bff	";			
+				value.classList.remove("red1");
+				value.classList.add("blue1");
+				
+			}
+		}
+		function Calculate()
+		{
+			
+			var sign=document.getElementById("sign");
+			var btnCalculate=document.getElementById("btnCalculate");
+			var desc=document.getElementById("desc").value;
+			var value=parseFloat(document.getElementById("value").value);
+			var rs=parseFloat(document.getElementById("calc").innerHTML);
+
+			if(document.getElementById("value").value=="" || document.getElementById("desc").value=="")
+			{
+				alert("Please Enter Proper Data");
+			}
+			else
+			{
+					var tr=document.createElement("tr");
+					tr.classList.add("r1");
+					
+					var td1=document.createElement("td");
+					var td2=document.createElement("td");
+					var td3=document.createElement("td");
+					var btn=document.createElement("button");
+					
+
+					td1.classList.add("widthTd");
+					td1.innerHTML=desc;
+					td2.innerHTML=value.toFixed(2);
+					btn.classList.add("close");
+					btn.innerHTML="X";
+					td3.appendChild(btn);
+					tr.appendChild(td1);
+					tr.appendChild(td2);
+					tr.appendChild(td3);
+					
+					
+
+				if(sign.value=="+")
+				{
+					var income=parseInt(document.getElementById("income").innerHTML);
+					income+=value;
+					rs+=value;
+					document.getElementById("calc").innerHTML=rs.toFixed(2).toString();
+					document.getElementById("income").innerHTML=income.toFixed(2);
+					tr.id="tr"+cntIn;
+					btn.id="btnIn"+cntIn;
+					cntIn++;
+					btn.addEventListener("click",removeIncome);
+					document.getElementById("iTable").appendChild(tr);
+				}
+				else if(sign.value=="-")
+				{
+					var expense=parseInt(document.getElementById("expense").innerHTML);
+					expense+=value;
+					rs=rs-value;
+					document.getElementById("calc").innerHTML=rs.toFixed(2).toString();
+					document.getElementById("expense").innerHTML=expense.toFixed(2);
+					tr.id="tr"+cntEx;
+					btn.id="btnEx"+cntEx;
+					cntEx++;
+					btn.addEventListener("click",removeExpense);
+					document.getElementById("eTable").appendChild(tr);
+					
+				}
+			}
+			document.getElementById("desc").value=""	
+			document.getElementById("value").value=""
+			document.getElementById("sign").value="+";
+			changeFunction();
+		}
+		function removeIncome(event)
+		{
+			console.log(event.target.id);
+			var btn=document.getElementById(event.target.id);
+			var tr=btn.parentElement.parentElement;
+			var rs=parseFloat(document.getElementById("calc").innerHTML);
+			var income=parseFloat(document.getElementById("income").innerHTML);
+			var td2	= parseFloat(tr.childNodes[1].innerHTML);
+			income=income-td2;
+			rs=rs-td2;
+			document.getElementById("calc").innerHTML=rs.toFixed(2);
+			document.getElementById("income").innerHTML=income.toFixed(2);
+			tr.parentElement.removeChild(tr);
+			console.log(td2);
+			console.log(tr.id);
+		
+		
+		}
+		function removeExpense(event)
+		{
+			console.log(event.target.id);
+			var btn=document.getElementById(event.target.id);
+			var tr=btn.parentElement.parentElement;
+			var rs=parseFloat(document.getElementById("calc").innerHTML);
+			var expense=parseFloat(document.getElementById("expense").innerHTML);
+			var td2	= parseFloat(tr.childNodes[1].innerHTML);
+			expense=expense-td2;
+			rs=rs+td2;
+			document.getElementById("calc").innerHTML=rs.toFixed(2);
+			document.getElementById("expense").innerHTML=expense.toFixed(2);
+			tr.parentElement.removeChild(tr);
+			console.log(td2);
+			console.log(tr.id);
+		
+		}
+	</script>
+
+</body>
+
+</html>
